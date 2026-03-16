@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Franks Angels',
-  description: 'Welcome to Franks Angels',
+  title: 'Franks Angels - Supporting Youth Baseball Fields',
+  description: 'Helping youth baseball fields thrive in underserved communities through ratings, reviews, and donations.',
 }
 
 export default function RootLayout({
