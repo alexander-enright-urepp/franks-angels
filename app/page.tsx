@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Search, PlusCircle, Heart, MapPin, Star, ArrowRight } from 'lucide-react'
+import { Search, PlusCircle, Heart, MapPin, Star, ArrowRight, TrendingUp, DollarSign, Target } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -96,6 +96,77 @@ export default function Home() {
             Explore Fields
             <ArrowRight className="w-5 h-5" />
           </Link>
+        </div>
+      </section>
+
+      {/* Fundraising Progress Section */}
+      <section className="py-20 bg-navy-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-navy-100 text-navy-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <TrendingUp className="w-4 h-4" />
+              Live Progress
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Help Fields in Need
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Support youth baseball fields that need repairs, equipment, and improvements
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-xl border border-navy-100 p-8 max-w-4xl mx-auto">
+            {/* Progress Bar */}
+            <div className="mb-8">
+              <div className="flex justify-between items-center mb-3">
+                <span className="text-lg font-semibold text-gray-900">Community Fundraising Goal</span>
+                <span className="text-navy-600 font-bold">$45,230 of $100,000</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-4">
+                <div className="bg-gradient-to-r from-navy-400 to-navy-600 h-4 rounded-full" style={{ width: '45%' }}></div>
+              </div>
+              <div className="flex justify-between text-sm text-gray-500 mt-2">
+                <span>45% funded</span>
+                <span>23 fields supported</span>
+              </div>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-3 gap-6 mb-8">
+              <div className="text-center p-4 bg-navy-50 rounded-xl">
+                <div className="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <DollarSign className="w-6 h-6 text-navy-600" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900">$45,230</div>
+                <div className="text-sm text-gray-600">Raised</div>
+              </div>
+              <div className="text-center p-4 bg-navy-50 rounded-xl">
+                <div className="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Target className="w-6 h-6 text-navy-600" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900">23</div>
+                <div className="text-sm text-gray-600">Fields Funded</div>
+              </div>
+              <div className="text-center p-4 bg-navy-50 rounded-xl">
+                <div className="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Heart className="w-6 h-6 text-navy-600" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900">342</div>
+                <div className="text-sm text-gray-600">Donors</div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center">
+              <Link
+                href="/fields-needing-help"
+                className="inline-flex items-center gap-2 bg-navy-500 hover:bg-navy-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
+              >
+                <Heart className="w-5 h-5" />
+                Donate Now
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
